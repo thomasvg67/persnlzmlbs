@@ -8,14 +8,14 @@ const createDailyAlerts = require("./middleware/crnJbAlrt");
 dotenv.config();
 
 const app = express();
-// app.use(cors({
-//   origin: 'https://crm.zoomlabs.in', // or use '*' for testing (not for production)
-//   credentials: true // if using cookies or auth headers
-// }));
 app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
+  origin: 'https://personalr.zoomlabs.in', // or use '*' for testing (not for production)
+  credentials: true // if using cookies or auth headers
 }));
+// app.use(cors({
+//   origin: "http://localhost:5173",
+//   credentials: true
+// }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
